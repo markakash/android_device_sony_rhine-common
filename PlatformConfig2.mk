@@ -26,5 +26,4 @@ TARGET_KERNEL_SOURCE := kernel/sony/msm
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # RIL class override
-
 BOARD_RIL_CLASS := ../../../$(PLATFORM_COMMON_PATH)/ril/
