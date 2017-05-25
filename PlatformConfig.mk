@@ -47,9 +47,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/fstab.rhine
 
-# Camera HAL1 hack on 7.x
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-
 # Wi-Fi definitions for Qualcomm solution
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HOSTAPD_DRIVER := NL80211
@@ -74,8 +71,11 @@ BOARD_HAVE_ALTERNATE_FM := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
-# Props for hotplugging
+# RIL class override
 TARGET_SYSTEM_PROP += $(PLATFORM_COMMON_PATH)/system.prop
+
+# Camera
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy
